@@ -22,10 +22,9 @@ client.on('interactionCreate', (interaction) => {
     switch (interaction.commandName) {
         case 'trophylist':
             const clantag = interaction.options.get('clan-tag').value;
+            let top = null;
             if (interaction.options.get('top') !== null) {
-                const top = interaction.options.get('top').value;
-            } else {
-                const top = null;
+                top = interaction.options.get('top').value;
             }
             (async () => {
                 await clan.TrophyList(clantag, top);
