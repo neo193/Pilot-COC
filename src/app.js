@@ -27,7 +27,7 @@ client.on('interactionCreate', (interaction) => {
                 top = interaction.options.get('top').value;
             }
             (async () => {
-                await clan.TrophyList(clantag, top);
+                await clan.TrophyList(clantag, top, interaction);
             })();
             break;
 
